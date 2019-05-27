@@ -11,6 +11,9 @@ spring:
     active:
     - dev
 
+  application:
+    name: zipkinApplication
+
   autoconfigure:
     exclude:
     - 
@@ -42,8 +45,16 @@ spring:
     contentnegotiation:
       favor-parameter: true 
 
-
-
+  zipkin:
+    # zipkin开关
+    enabled: true
+    base-url: http://192.168.5.11:9411
+    compression:
+      enabled: true
+    discovery-client-enabled: true
+    
+    service:
+      name: myZipkin
 
 
 

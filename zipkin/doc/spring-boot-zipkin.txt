@@ -1,0 +1,27 @@
+Spring Boot
+
+1.配置文件
+使用 application.properties 或 application.yaml
+
+
+# 启动2个实例，也可以用启用一个实例
+-Dserver.port=7070 -Dspring.zipkin.service.name=zipkin
+-Dserver.port=7071 -Dspring.zipkin.service.name=zipkin2
+
+# 触发调用
+http://127.0.0.1:7070/person/getAndPost
+
+在http://192.168.5.11:9411/zipkin界面上就可以看到请求的处理情况
+spring.zipkin.service.name 定义显示的服务名，一般为application.name 
+spring.zipkin.service.name=${spring.application.name}
+
+
+
+
+
+
+
+
+
+
+

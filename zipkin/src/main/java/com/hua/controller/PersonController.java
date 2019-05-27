@@ -112,6 +112,8 @@ public class PersonController extends BaseController
 		result.setMessage("收到[" + searchBean.getName() + "]的请求");
 		result.setMessageCode("205");
 		result.setSuccess(true);
+		//restTemplate().getForEntity("http://127.0.0.1:7071/person/search",String.class).getBody();
+		
 		
 		return result;
 	}
