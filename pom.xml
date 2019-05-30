@@ -13,6 +13,7 @@
 		<module>monitor-template</module>		
 		<module>monitor-core</module>		
 		<module>zipkin</module>		
+		<module>cat-monitor</module>
 		<!--
 		<module></module>		
 		<module></module>		
